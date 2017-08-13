@@ -1,0 +1,37 @@
+///////////////////////////
+//////// FONTS ////////////
+///////////////////////////
+
+// Bold
+@font-face {
+    font-family: plexBold;
+    src: url(../../fonts/IBMPlexSans-Bold-V01.1.otf);
+}
+
+// Regular
+@font-face {
+    font-family: plexRegular;
+    src: url(../../fonts/IBMPlexSans-Regular-V01.1.otf);
+}
+
+// Light
+@font-face {
+    font-family: plexLight;
+    src: url(../../fonts/IBMPlexSans-Light-V01.1.otf);
+}
+
+// Medium
+@font-face {
+    font-family: plexMedium;
+    src: url(../../fonts/IBMPlexSans-Medium-V01.1.otf);
+}
+
+
+///////////////////////////
+//////// COLORS ////////////
+///////////////////////////
+$dark-gray: #464646;
+$main-blue: #000076;
+$secondary-blue: #001689;
+$teal: #25B1EB;
+

@@ -1,0 +1,41 @@
+///////////////////////////
+///// MAIN STYLES /////////
+///////////////////////////
+.identity {
+	&__container {
+		animation: fadeIn 1s linear forwards;
+	}
+	
+	&__content {
+		display: flex;
+		margin-top: 50px;
+		animation: fadeIn 1s linear forwards;
+	}
+
+	&__content-text {
+		max-width: 350px;
+	}
+
+	&__content-section:first-child {
+		margin-right: 300px;
+	}
+
+	&__content-logo {
+		margin-top: 50px;
+		width: 225px;
+	}
+
+	&__list {
+		li {
+			margin: 20px 0px;
+		}
+
+		&--underline {
+			text-decoration: underline;
+		}
+	}
+
+	&__content-logo--grid{
+		width: 350px;
+	}
+}

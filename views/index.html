@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IBM Q Experience Guide</title>
+	<link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+	<div class="landing__container">
+		<img class="landing__logo" src="/images/q-logo-blue.svg" alt="IBM Q Logo">
+		<div class="landing__content-wrapper">
+			<h1 class="landing__title">IBM <span class="landing__title--bold">Q</span></h1>
+			<h2 class="landing__content-subtitle">Experience Guide</h2>
+			<p class="landing__content">IBM Q is an industry-first initiative to build commercially available universal quantum computers for business and science.</p> <br/><br/>
+			<p class="landing__content">The IBM Q Experience Guide is a series of individual styles and components, that when combined create the visual experience for IBM Q.</p>
+			<a id="landing__get-started-link" href="#"><button class="landing__get-started-btn">Get started</button></a>
+		</div>
+	</div>
+	<script>
+		const landingGetStarted         = document.querySelector('#landing__get-started-link');
+		const landingContainer          = document.querySelector('.landing__container');
+		
+		// Fade out landing page on "Get Started" click
+		landingGetStarted.addEventListener('click', () => {
+			landingContainer.classList.add('landing-fade-out');
+			window.setTimeout(() => {
+				window.location.replace('/getting-started-designers');
+			}, 1500);
+
+		});
+	</script>
+</body>
+
+</html>

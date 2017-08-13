@@ -1,0 +1,49 @@
+///////////////////////////
+//////// BASE /////////////
+///////////////////////////
+* {
+	margin: 0;
+	padding: 0;
+	color: $dark-gray;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	font-family: plexRegular;
+	font-size: 16px;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+main {
+	left: 250px;
+	margin: 0px 50px;
+	position: absolute;
+	width: 100%;
+	background: white;
+	display: flex;
+	flex-direction: column;
+}
+
+nav {
+	display: flex;
+    flex-direction: column;
+	background-color: $secondary-blue;
+	height: 100%;
+	position: fixed;
+	width: 220px;
+}
+
+h2 {
+	font-size: 3em;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}

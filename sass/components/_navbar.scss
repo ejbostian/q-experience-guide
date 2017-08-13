@@ -1,0 +1,192 @@
+///////////////////////////
+//////// MAIN STYLES //////
+///////////////////////////
+.nav {
+	position: fixed;
+	left: -220px;
+	width: 0;
+	z-index: 999;
+	overflow-y: scroll;
+	&__wrapper {
+		margin-top: 30px;
+		width: 100%;
+	}
+	&__logo {
+		margin-top: 30px;
+		margin-left: 30px;
+		width: 100px;
+	}
+
+	&__label {
+		color: white;
+		display: inline-block;
+		margin: 20px 0px 0px 30px;
+		&:hover, &:focus {
+			cursor: pointer;
+		}
+	}
+
+	&__sub-menu {
+		margin-top: 15px;
+		opacity:0;
+		max-height: 0;
+		overflow-y: hidden;
+		transition-property: all;
+		transition-duration: .75s;
+		transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+	}
+
+	&__sub-menu-item {
+		color: white;
+		font-family: plexLight;
+		list-style-type: none;
+		padding: 15px 30px 15px 60px;
+
+		&:hover, &:focus {
+			background: #011269;
+			cursor: pointer;
+			color: white;
+		}
+	}
+
+	&__close-btn {
+		color: white;
+		width: 100%;
+		font-size: 2em;
+		padding-right: 20px;
+		position: absolute;
+		left: 190px;
+		cursor: pointer;
+	}
+	
+	&__btn-group {
+		margin-top: 200px;
+		text-align: center;
+	}
+
+	&__btn {
+		align-self: center;
+		height: 30px;
+		border: 2px solid white;
+		width: 90%;
+		background: transparent;
+		margin-bottom: 15px;
+		cursor: pointer;
+	}
+
+	&__btn-link {
+		color: white;
+		cursor: pointer;
+		text-decoration: none;
+	}
+}
+
+
+///////////////////////////
+//// ACTIVE + HOVER ///////
+///////////////////////////
+
+// Button hover states
+.nav__btn:hover {
+	background: white;
+	border: 2px solid $main-blue;
+	transition: .5s ease-in;
+
+	a {
+		color: $main-blue;
+		transition: .5s ease-in;
+	}
+}
+
+// Active nav item
+.nav__sub-menu-item--active {
+	background: white;
+	font-family: plexBold;
+	padding: 15px 30px 15px 60px;
+	a {
+		color: $main-blue !important;
+	}
+}
+
+// Active submenu
+.submenu--active {
+	max-height: 150px; /* approximate max height */
+	opacity: 1;
+	transition-property: all;
+	transition-duration: .75s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+
+}
+
+
+// Navigation slide out - hide
+.nav--show {
+	animation: showNav .8s forwards;
+}
+
+// Navigation slide out - hide
+.nav--hide {
+	animation: hideNav .8s forwards;
+}
+
+///////////////////////////
+///// HAMBURGER MENU //////
+///////////////////////////
+
+// Hamburger menu group
+.hamburger-menu {
+    display: inline-block;
+	cursor: pointer;
+	position: fixed;
+    left: 50px;
+	top: 20px;
+	z-index: 998;
+	animation: fadeIn 1s linear forwards;
+}
+
+// Bars for hamburger menu
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: $main-blue;
+    margin: 6px 0;
+    transition: 0.5s;
+}
+
+
+///////////////////////////
+//////// KEYFRAMES ////////
+///////////////////////////
+
+// Hide nav
+@keyframes hideNav {
+	0% {
+		width: 220px;
+		left: 0px;
+		opacity: 1;
+	}
+
+
+	100% {
+		width: 0px;
+		left: -220px;
+		opacity: 0;
+	}
+}
+
+// Show nav
+@keyframes showNav {
+	0% {
+		width: 0px;
+		left: -220px;
+		opacity: 0;
+	}
+
+
+	100% {
+		width: 220px;
+		left: 0px;
+		opacity: 1;
+	}
+}
+

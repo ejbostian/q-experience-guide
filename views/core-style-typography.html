@@ -1,0 +1,59 @@
+{% extends "templates/index.html" %}
+
+{% block main %}
+	<div class="typog__container">
+		<div class="section__header-wrapper">
+				<h2 class="section__header">Typography</h2>
+			</div>
+
+			<div class="section__content-wrapper">
+				<div class="section__divider"></div>
+				<div class="typog__content-wrapper">
+					<div class="typog__row">
+						<h3 class="typog__header">Font Family</h3>
+						<h1 class="typog__font-family" id="light-font">200 IBM Plex Sans Light*</h1>
+						<h1 class="typog__font-family" id="regular-font">400 IBM Plex Sans Regular</h1>
+						<h1 class="typog__font-family" id="medium-font">600 IBM Plex Sans Medium</h1>
+						<h1 class="typog__font-family" id="bold-font">800 IBM Plex Sans Bold</h1>
+						<div class="code__wrapper">
+							<code>
+							@font-face { <br>
+								font-family: plexRegular;<br>
+								src: url(/../../fonts/IBMPlexSans-Regular-V01.1.otf)<br>
+							}
+							</code>
+						</div>
+						<div class="code__wrapper">
+							<code>
+							// Fallback Font Family <br>
+							font-family: HelveticaNeue "Helvetica Neue" Helvetica, sans-serif;
+							</code>
+						</div>
+						<p class="annotation">* IBM Plex Sans Light could be used for data visualization and special cases but note that it should be used sparingly at sizes larger than 39px / 2.441 em and sizes smaller then 16 px / 1 em.</p>
+					</div>
+					<div class="typog__row">
+						<h3 class="typog__header">Type Scales</h3>
+						<p>Base size is 16 px with 1.25 em modular scaling (Major Third).</p>
+						<br><br>
+						<h1 class="typog__font-size" id="extra-large-light">Extra Large Heading Light</h1>
+						<p class="typog__caption">H1 | 2.441em | 39px</p>
+						<h2 class="typog__font-size" id="large-regular">Large Heading Regular</h1>
+						<p class="typog__caption">H2 | 1.953.em | 31px</p>
+						<h3 class="typog__font-size" id="medium-medium">Medium Heading Medium</h3>
+						<p class="typog__caption">H3 | 1.563em | 25px</p>
+						<h4 class="typog__font-size" id="small-bold">Small Heading Bold</h4>
+						<p class="typog__caption">H4 | 1.25em | 20px</p>
+						<h4 class="typog__font-size" id="caps">All caps heading</h4>
+						<p class="typog__caption">H5 | 1em | 16px</p>
+						<p class="typog__font-size" id="body">This example of paragraph or body copy is meant to show you the proper size of type in the scale you are looking at. It’s important to find a scale that is flexible and works for your design.</p>
+						<p class="typog__caption">Body | 1em | 16px/24px</p>
+						<p class="typog__font-size" id="caption">This is how a caption looks at .8 em.</p>
+						<p class="typog__caption">Caption | .8em | 12px</p>
+					</div>
+				</div>
+			</div>
+	</div>
+	
+
+	
+{% endblock %}

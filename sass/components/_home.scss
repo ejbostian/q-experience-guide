@@ -1,0 +1,62 @@
+///////////////////////////
+///// MAIN STYLES /////////
+///////////////////////////
+.home {
+	&__container {
+		animation: fadeIn 1s linear forwards;
+	}
+
+	&__description {
+		color: $dark-gray;
+		align-self: center;
+		max-width: 400px;
+		font-family: plexLight;
+		font-size: 2em;
+	}
+
+	&__header-container {
+		display: flex;
+	}
+
+	&__filler {
+		height: 200px;
+		overflow-y: hidden;
+	}
+
+	&__logo {
+		height: 603px;
+		width: 457px;
+	}
+}
+
+// Header
+.header {
+	display: flex;
+	flex-direction: column;
+	height: 300px;
+	justify-content: center;
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+}
+
+
+///////////////////////////
+///// MEDIA QUERIES ///////
+///////////////////////////
+@media (max-width: 1200px) {
+	.home {
+		&__header-container{
+			flex-direction: column;
+		}
+
+		&__description {
+			align-self: left;
+			font-size: 1.5em;
+			margin-left: 20px;
+		}
+	}
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+
+	<div class="hamburger-menu">
+		<div class="bar1"></div>
+		<div class="bar2"></div>
+		<div class="bar3"></div>
+	</div>
+	<div class="flex">
+		<nav class="nav nav--show">
+			<div class="nav__close-btn">X</div>
+			<a href="/"><img class="nav__logo" src="/images/ibm-q-trademark-white.svg" alt="IBM Q Logo"></a>
+			<div class="nav__wrapper">
+				<label id="getting-started__label" class="nav__label" for="getting-started__submenu">Getting Started</label>
+				<ul {% if active == "getting-started-designers" %} class="nav__sub-menu submenu--active" {% elif active == "getting-started-developers" %} class="nav__sub-menu submenu--active" {% endif %} id="getting-started__sub-menu" class="nav__sub-menu">
+					<li {% if active == "getting-started-designers" %} class="nav__sub-menu-item--active" {% endif %} class="nav__sub-menu-item" id="designers__label"><a id="designers__link" href="/getting-started-designers">Designers</a></li>
+					<li {% if active == "getting-started-developers" %} class="nav__sub-menu-item--active" {% endif %} class="nav__sub-menu-item" id="developers"><a href="/getting-started-developers">Developers</a></li>
+				</ul>
+
+				<label id="core-style__label" class="nav__label" for="core-style__submenu">Core Style</label>
+				<ul {% if active == "core-style-identity" %} class="nav__sub-menu submenu--active" {% elif active == "core-style-typography" %} class="nav__sub-menu submenu--active" {% elif active == "core-style-colors" %} class="nav__sub-menu submenu--active" {% endif %} id="core-style__sub-menu" class="nav__sub-menu">
+					<li {% if active == "core-style-identity" %} class="nav__sub-menu-item--active" {% endif %} class="nav__sub-menu-item" id="identity__label"><a id="identity__link" href="/core-style-identity">Identity</a></li>
+					<li {% if active == "core-style-colors" %} class="nav__sub-menu-item--active" {% endif %} class="nav__sub-menu-item" id="colors"><a href="/core-style-colors">Colors</a></li>
+					<li {% if active == "core-style-typography" %} class="nav__sub-menu-item--active" {% endif %} class="nav__sub-menu-item" id="typography"><a href="/core-style-typography">Typography</a></li>
+				</ul>
+			</div>		
+			<div class="nav__btn-group">
+				<button class="nav__btn"><a class="nav__btn-link" target=blank href="https://ibm.box.com/s/n55r0rgwsaw60c96muu1303xt8xzah4v">Get the Sketch UI Kit</a></button>
+				<button class="nav__btn"><a class="nav__btn-link" target=blank href="https://github.ibm.com/IBMQuantum/ibm-q-components">Get the Component Library</a></button>	
+			</div>
+			
+		</nav>
+
+		<main>
+			{% block main %}{% endblock %}
+		</main>
+	</div>
+
+	<script src="main.js"></script>
+</body>
+</html>

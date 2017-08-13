@@ -1,0 +1,92 @@
+///////////////////////////
+///// LANDING PAGE ////////
+///////////////////////////
+.landing {
+	&__container {
+	align-items: center;
+	background-color: $main-blue;
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	}
+
+	&__title {
+	color: white;
+	font-family: plexLight;
+	font-size: 4em;
+
+		&--bold {
+			color: white;
+			font-family: plexBold;
+		}
+	}
+
+	&__logo {
+		margin: 0px 50px;
+	}
+
+	&__content {
+		color: white;
+		font-family: plexLight;
+		font-size: 1.5em;
+	}
+
+	&__content-wrapper {
+		max-width: 500px;	
+	}
+
+	&__content-subtitle {
+		color: $teal;
+		font-size: 2em;
+	}
+
+	&__get-started-btn {
+	background-color: transparent;
+	border: 1px solid white;
+	color: white;
+	height: 35px;
+	margin-top: 20px;
+	width: 100px;
+	transition: background-color 0.3s ease,
+							color .3s ease;
+
+		&:hover {
+			background-color: white;
+			color: $main-blue;
+			cursor: pointer;
+			transition: background-color 0.3s ease,
+									color .3s ease;
+		}
+	}
+}
+
+.landing-fade-out {
+	animation: landingFadeOut 1s linear forwards;
+}
+
+///////////////////////////
+///// MEDIA QUERIES ///////
+///////////////////////////
+@media (max-width: 930px) {
+	.landing__container {
+		flex-flow: column;
+		text-align: center;
+	}
+
+	.landing__title {
+		margin-bottom: 30px;
+	}
+
+	.landing__content-wrapper {
+		margin: 0px;
+	}
+
+}
+
+///////////////////////////
+///// KEYFRAMES ///////////
+///////////////////////////
+@keyframes landingFadeOut {
+	0% { opacity: 1; }
+	100% { opacity: 0 }
+}

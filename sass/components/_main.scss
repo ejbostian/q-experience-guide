@@ -1,0 +1,78 @@
+///////////////////////////
+///// MAIN STYLES /////////
+///////////////////////////
+
+// Heading wrapper
+.section__header-wrapper {
+	margin-right: 20px;
+	margin-top: 75px;
+	max-width: 600px;
+}
+
+// Headers for each page
+.section__header {
+	font-family: plexLight;
+}
+
+// Descriptions for each page
+.section__description {
+	font-family: plexLight;
+	margin-top: 20px;
+}
+
+// Main content for each section that stretches the entire height
+.section__content-wrapper {
+	margin-top: 50px;
+}
+
+// The teal section__divider between section headers + content
+.section__divider {
+	border-bottom: 5px solid $teal;
+	margin: 15px 0px;
+	width: 50px;
+}
+
+// Titles for each sub-section
+.section__title {
+	color: $dark-gray;
+	margin-bottom: 10px;
+	font-size: 1.2em;
+}
+
+// Code styling
+.code__wrapper {
+	background-color: #F4F4F4;
+	border-left: 3px solid $main-blue;
+	padding: 15px;
+	margin-top: 20px;
+
+	code {
+		color: #484F55;
+	}
+}
+// Annotation
+.annotation {
+	margin-top: 50px;
+	font-size: .8em;
+}
+
+
+
+///////////////////////////
+///// MEDIA QUERIES ///////
+///////////////////////////
+// Re-format main section on browser resize
+@media (max-width: 800px) {
+  main {
+  	left: 0;
+  	position: relative;
+  }
+}
+
+///////////////////////////
+///// KEYFRAMES ///////////
+///////////////////////////
+@keyframes fadeIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}

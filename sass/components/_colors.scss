@@ -1,0 +1,95 @@
+///////////////////////////
+///// MAIN STYLES /////////
+///////////////////////////
+.colors {
+	&__container {
+	animation: fadeIn 1s linear forwards;
+	}
+
+	// Outer wrapper around all color content
+	&__content-wrapper {
+		display: flex;
+		flex-direction: column;
+		margin-top: 20px;
+	}
+
+	// Each row of colors
+	&__row {
+		display: flex;
+		margin-top: 50px;
+	}
+
+	// A group of colors that are connected, including title
+	&__group {
+		margin-right: 30px;
+	}
+
+	// The wrapper around the color tiles
+	&__group-wrapper {
+		display: flex;
+		margin-top: 20px;
+	}
+
+	// The physical color blocks
+	&__color {
+		align-items: center;
+		color: white;
+		display: flex;
+		height: 100px;
+		text-align: middle;
+		justify-content: center;
+		width: 100px;
+	}
+}
+
+///////////////////////////
+/////// COLORS ////////////
+///////////////////////////
+
+// Primary colors
+#colors__001689 { @include color-square(#001689); }
+#colors__25B1EB { @include color-square(#25B1EB); }
+
+// Secondary colors
+#colors__121212 { @include color-square(#121212); }
+#colors__f4f4f4 { @include color-square(#f4f4f4, $dark-gray); }
+
+// Accent color
+#colors__db2663 { @include color-square(#db2663); }
+
+// Text color
+#colors__23292e { @include color-square(#23292e); }
+
+// Background colors
+#colors__f4f4f4 { @include color-square(#f4f4f4, $dark-gray); }
+#colors__fff { @include color-square(#FFF, $dark-gray); }
+
+// Greyscale Palette
+#colors__343c41 { @include color-square(#343c41); }
+#colors__484f55 { @include color-square(#484f55); }
+#colors__5d636a { @include color-square(#5d636a); }
+#colors__868c91 { @include color-square(#868c91); }
+
+// Status colors
+#colors__7ccc10 { @include color-square(#7ccc10); }
+#colors__fab909 { @include color-square(#fab909); }
+#colors__fb6127 { @include color-square(#fb6127); }
+#colors__dd0026 { @include color-square(#dd0026); }
+
+// Data visualization palette
+#colors__b380e0 { @include color-square(#b380e0); }
+#colors__8747b8 { @include color-square(#8747b8); }
+#colors__6e177d { @include color-square(#6e177d); }
+#colors__a71c71 { @include color-square(#a71c71); }
+#colors__db2663 { @include color-square(#db2663); }
+#colors__d75193 {@include color-square(#d75193); }
+
+
+///////////////////////////
+///// MEDIA QUERIES ///////
+///////////////////////////
+@media (max-width: 1200px) {
+	.colors__row {
+		flex-direction: column;
+	}
+}
